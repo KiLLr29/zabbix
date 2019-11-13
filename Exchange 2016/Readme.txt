@@ -4,6 +4,8 @@ Import this template file into Zabbix.
 Zabbix must be 4.4.x or higher for this to work.
 (Note: May "WORK" on lower zabbix versions)
 
+This template uses discovery rules (Which Are Disabled by Default)
+
 This template is based on using the {EVENT.TAGS} as a execute command within Actions.
 (Note: The whole Trigger will execute all alerts and do with them as you specify but independently execute based on 5m runtimes)
 So if there are three (3) services out, it may take fifteen (15) to twenty (20) mins to restart them.
