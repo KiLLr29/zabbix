@@ -2,6 +2,7 @@ In order to use this template.
 
 Import this template file into Zabbix.
 Zabbix must be 4.4.x or higher for this to work.
+(Note: May "WORK" on lower zabbix versions)
 
 This template is based on using the {EVENT.TAGS} as a execute command within Actions.
 (Note: The whole Trigger will execute all alerts and do with them as you specify but independently execute based on 5m runtimes)
