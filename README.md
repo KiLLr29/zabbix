@@ -1,0 +1,2 @@
+# zabbix
+Templates for Zabbix
