@@ -5,13 +5,18 @@ This works with Exchange 2016 CU12 or Higher (Or will it?)
 OK, this template uses the following:
 
 1: Zabbix Agent Active
-2: Triggers
-3: Graphs
-4: Powershell Script
-5: ALERTS (Easly Configerable for EVERYONE ~YEAH!~
-6: My Insanity on bad PS1 file scripting
+2: LLD (Low-Lever Discovery)
+3: Triggers
+4: Graphs
+5: Powershell Script
+6: ALERTS (Easly Configerable for EVERYONE ~YEAH!~
+7: My Insanity on bad PS1 file scripting
 
 Okay...
+
+This template will "Discover" all mailboxes within ~TWENTY-FOUR (24) Hours~ then check every day for changes
+
+So, here is the details
 
 Dump these 3 lines of code into the zabbix agent config at teh bottom of "zabbix_agentd.conf". File is located located under C:\Program Files\Zabbix Agent ~NORMALL~ unless you made a diffrent path.... */sigh/*
 
