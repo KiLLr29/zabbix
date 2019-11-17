@@ -1,8 +1,10 @@
 Alright, I've wasted a *PERFECTLY GOOD WEEKEND FOR EVERYONE!*
 
+This works with Exchange 2016 CU12 or Higher (Or will it?)
+
 OK, this template uses the following:
 
-1: Zabbix Active Agent
+1: Zabbix Agent Active
 2: Triggers
 3: Graphs
 4: Powershell Script
