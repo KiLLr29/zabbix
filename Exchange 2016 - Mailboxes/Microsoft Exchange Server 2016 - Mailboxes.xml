@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2019-11-17T21:32:15Z</date>
+    <date>2019-11-20T19:49:46Z</date>
     <groups>
         <group>
             <name>Exchange Servers</name>
@@ -44,7 +44,7 @@
                         <item_prototype>
                             <name>{#MAILALIAS} | On-Line Archive % Used</name>
                             <type>ZABBIX_ACTIVE</type>
-                            <key>exchange.host[archivepercentage{#MAILALIAS}]</key>
+                            <key>exchange.host[archivepercentage,{#MAILALIAS}]</key>
                             <delay>24h</delay>
                             <units>bytes</units>
                             <description>Percentage, Is used *LOOSELY* HERE</description>
@@ -91,12 +91,6 @@
                                     <name>{#MAILALIAS} On-Line Archive at 100% | ~NEVER SHOULD HAVE GOTTEN HERE~</name>
                                     <opdata>Ok, Who's at fault - Admin's will be checking the ~TICKETS!~</opdata>
                                     <priority>DISASTER</priority>
-                                    <manual_close>YES</manual_close>
-                                </trigger_prototype>
-                                <trigger_prototype>
-                                    <expression>{change()}&gt;2</expression>
-                                    <name>{#MAILALIAS} | 2% Abnormal On-Line Archive Growth Since Last Check</name>
-                                    <priority>WARNING</priority>
                                     <manual_close>YES</manual_close>
                                 </trigger_prototype>
                             </trigger_prototypes>
@@ -188,7 +182,7 @@
                         <item_prototype>
                             <name>{#MAILALIAS} | Mailbox % Used</name>
                             <type>ZABBIX_ACTIVE</type>
-                            <key>exchange.host[mailboxpercentage{#MAILALIAS}]</key>
+                            <key>exchange.host[mailboxpercentage,{#MAILALIAS}]</key>
                             <delay>24h</delay>
                             <units>bytes</units>
                             <description>Percentage, Is used *LOOSELY* HERE</description>
@@ -235,6 +229,18 @@
                                     <name>{#MAILALIAS} Mailbox at 100% | ~NEVER SHOULD HAVE GOTTEN HERE~</name>
                                     <opdata>Ok, Who's at fault - Admin's will be checking the ~TICKETS!~</opdata>
                                     <priority>DISASTER</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{change()}&gt;2</expression>
+                                    <name>{#MAILALIAS} | 2% Abnormal Mailbox Growth Since Last Check</name>
+                                    <priority>WARNING</priority>
+                                    <manual_close>YES</manual_close>
+                                </trigger_prototype>
+                                <trigger_prototype>
+                                    <expression>{change()}&gt;2</expression>
+                                    <name>{#MAILALIAS} | 2% Abnormal On-Line Archive Growth Since Last Check</name>
+                                    <priority>WARNING</priority>
                                     <manual_close>YES</manual_close>
                                 </trigger_prototype>
                             </trigger_prototypes>
