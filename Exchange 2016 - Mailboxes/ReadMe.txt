@@ -23,13 +23,13 @@ This works with Exchange 2016 CU12 or Higher (Or will it?)
 
 Zabbix Version Minimum is 4.0, Built on 4.4
 
-(Template Version 1.0.1)
+(Template Version 1.0.2)
 
-Current: Version 1.0.1
-Notes: Did not have comma after (mailboxpercentage) or (archivepercentage). Caused errors for Trigger Prototype creation.
+Current: Version 1.0.2
+Notes: Did not have Trigger "{#MAILALIAS} | 2% Abnormal On-Line Archive Growth Since Last Check" setup
 
-Version: 1.0
-Notes: Current Release
+(PS Script Version 1.1 
+Notes: Added calculation fix for arguments "mailboxpercentage" & "archivepercentage" to use 2 decimal place values for triggers to correctly update.
 
 OK, this template uses the following:
 
