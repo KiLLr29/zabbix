@@ -19,7 +19,7 @@
   Output in JSON format for Zabbix in Discover - 
   single data line for other functions
 .NOTES
-  Version:        1.0
+  Version:        1.1
   Author:         psh@routepackets.net	
   Creation Date:  17/11/2019
     
@@ -98,9 +98,9 @@ if ($ActionType -eq "mailboxpercentage") {
     $mailbox_quota = Get-Mailbox $key | Select ProhibitSendReceiveQuota
         $mailbox_size = $mailbox_size.TotalItemSize.Value.ToBytes()
         $mailbox_quota = $mailbox_quota.ProhibitSendReceiveQuota.Value.ToBytes()
-        $mailbox_percent = $mailbox_size / $mailbox_quota 
+        $mailbox_percent = (“{0:N2}” -f ($mailbox_size / $mailbox_quota*100))
 
-    [Console]::WriteLine(($mailbox_percent)*100)
+    [Console]::WriteLine($mailbox_percent)
   
 }
 
@@ -112,9 +112,9 @@ if ($ActionType -eq "archivepercentage") {
     $archive_quota = Get-Mailbox -Identity $key -Archive -ResultSize Unlimited | Select ArchiveQuota
         $archive_size = $archive_size.TotalItemSize.Value.ToBytes()
         $archive_quota = $archive_quota.ArchiveQuota.Value.ToBytes()
-        $archive_percent = $archive_size / $archive_quota 
+        $archive_percent = (“{0:N2}” -f ($archive_size / $archive_quota*100))
 
-    [Console]::WriteLine(($archive_percent)*100)
+    [Console]::WriteLine($archive_percent)
   
 }
 
