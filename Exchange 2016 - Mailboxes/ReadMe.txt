@@ -21,7 +21,7 @@ It will monitor and trigger the following.
 
 This works with Exchange 2016 CU12 or Higher (Or will it?)
 
-Zabbix Version Minimum is 4.0, Built on 4.4
+Zabbix Version Minimum is 4.4, Built on 4.4
 
 (Template Version 1.1)
 
